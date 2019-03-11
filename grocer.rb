@@ -15,18 +15,27 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  new_hash = {}
+  binding.pry 
   coupons.each do |coupon|
-    if cart[coupon[:item]] != nil && ((cart[coupon[:item]][:count] - coupon[:num]) >= 0)
-      cart[coupon[:item]][:count] -= coupon[:num]
-      if cart[coupon[:item] + " W/COUPON"] == nil 
-        cart.merge!({coupon[:item] + " W/COUPON" => {:price => coupon[:cost], :clearance => cart[coupon[:item]][:clearance], :count => 1}})
-      else
-        cart[coupon[:item] + " W/COUPON"][:count] += 1
+  cart.each do |key, value|
+    if cart[:key] ==
+    
+  
+      
+      
+      
+    #{  
+  #"AVOCADO" => {:price => 3.0, :clearance => true, :count => 1},
+  #"KALE"    => {:price => 3.0, :clearance => false, :count => 1},
+  #"AVOCADO W/COUPON" => {:price => 5.0, :clearance => true, :count => 1},
+}
+      
+      
+      
       end
-    end
-  end
-  cart
-end
+ end 
+ 
 
 def apply_clearance(cart)
   # code here
